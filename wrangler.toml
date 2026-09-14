@@ -1,0 +1,15 @@
+name = "nexus-landing"
+main = "worker/index.ts"
+compatibility_date = "2026-09-14"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "NEXUS_DB"
+database_name = "nexus-db"
+database_id = "cfb3bdc8-ad27-4315-ab87-4e32f5174633"
+migrations_dir = "migrations"
